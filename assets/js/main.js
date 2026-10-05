@@ -202,6 +202,18 @@ const SVG = {
   basket: '<path d="M3 10h18l-2 10H5z"/><path d="M8 10l3-6M16 10l-3-6M9 14v2M15 14v2"/>',
   shirt: '<path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3c-.5 1.5-2 2.5-4 2.5S8.5 4.5 8 3z"/>',
   gift: '<rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12"/><path d="M12 9S10 4 7.5 5 9 9 12 9zM12 9s2-5 4.5-4S15 9 12 9z"/>',
+  factory: '<path d="M3 21V11l5 3v-3l5 3v-3l5 3V4h3v17z"/><path d="M3 21h18M7 17.5h2M12 17.5h2"/><path d="M19.5 4c0-1 .8-1.5 1.5-2"/>',
+  university: '<path d="M3 21h18"/><path d="M9 21V8l3-3 3 3v13"/><path d="M8 8h8M11.2 11.5h1.6M11.2 15h1.6"/><path d="M4 21v-6l5-1.5M20 21v-6l-5-1.5"/>',
+  hospital: '<rect x="4" y="7" width="16" height="14" rx="1"/><path d="M8 7V4h8v3"/><path d="M12 9.5v5M9.5 12h5"/><path d="M10 21v-3.5h4V21"/>',
+  clinic: '<path d="M3 11l9-7 9 7"/><path d="M5 9.5V21h14V9.5"/><path d="M12 11.5v5M9.5 14h5"/>',
+  certificate: '<rect x="3" y="4" width="18" height="12" rx="1"/><path d="M7 8h10M7 11h5"/><circle cx="16" cy="14.5" r="2.5"/><path d="M14.6 16.6 14 21l2-1 2 1-.6-4.4"/>',
+  handshake: '<path d="M2 12l4-5 4 2 3-2 3 .5L22 12"/><path d="M6 7l-.2 7.5L11 19l1.5-1 1.5 1 3.5-2.5L22 12"/><path d="M10 14.5l2 2M12.5 13l2 2"/>',
+  firstaid: '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8.5 7V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/><path d="M12 10.5v6M9 13.5h6"/>',
+  chip: '<rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/><circle cx="12" cy="12" r="6.5"/>',
+  roots: '<circle cx="12" cy="7.5" r="5"/><path d="M12 12.5V17"/><path d="M12 17c-1.5 1.5-3.5 2.5-6 3M12 17c1.5 1.5 3.5 2.5 6 3M12 17v4M12 17.5c-.8 1.4-2 2.6-3.5 3.3M12 17.5c.8 1.4 2 2.6 3.5 3.3"/>',
+  scholar: '<path d="M2 8.5l10-5 10 5-10 5z"/><path d="M6 10.5V14c0 1.4 2.7 2.7 6 2.7s6-1.3 6-2.7v-3.5"/><path d="M6 20h12"/><path d="M8 18v4M16 18v4"/>',
+  family: '<path d="M3 11l9-7 9 7"/><path d="M5 9.5V21h14V9.5"/><circle cx="9.8" cy="13" r="1.6"/><circle cx="14.6" cy="14" r="1.3"/><path d="M7.5 21v-2.5a2.3 2.3 0 0 1 4.6 0V21M12.8 21v-1.8a1.8 1.8 0 0 1 3.6 0V21"/>',
   search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SVG[name] || ""}</svg>`;

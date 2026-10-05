@@ -18,15 +18,17 @@ In **Settings → Pages → Custom domain**, enter your domain (for example `pat
 
 | What | Where |
 |---|---|
-| Contact email and phone | `assets/js/main.js` → `SITE` (top of file) |
+| Contact email | `index.html` (search for `impact@patel.it`) and `assets/js/main.js` → `SITE` |
 | Projects and stories | `assets/js/main.js` → `PROJECTS` array |
-| Page text (About, Mission, Kenya, timeline) | `index.html` |
-| Colours and fonts | `assets/css/styles.css` → `:root` |
+| Page text (About, Mission, Recent projects timeline, Kenya, Donate, Governance) | `index.html` |
+| Colours (earth palette) and fonts | `assets/css/styles.css` → `:root` |
+| Medical camp gallery | `index.html` → section `#gallery` |
+| Social share image | `assets/img/og-image.jpg` |
 | Logo | `assets/img/logo.png` |
 
 ### Photos
 - **Real project photos** load from the Steelmakers (smlzim.com) website and postimg.cc.
-- **Illustrative photos** load from Unsplash (free to use under the Unsplash License). They are marked "Illustrative photo" on the site so visitors don't mistake them for Foundation events. In `main.js` they are the `U("photo-…")` entries.
+- **Stock photos** load from Unsplash (free to use under the Unsplash License). In `main.js` they are the `U("photo-…")` entries.
 
 To swap in your own photos (recommended whenever you have real ones):
 1. Save the photos into `assets/img/projects/`.
@@ -36,3 +38,9 @@ Projects without photos show a coloured placeholder, so you can add photos one b
 
 ### Contact form
 The form opens the visitor's email app with the message ready to send, so no server is needed. For a form that submits directly, sign up for a free service such as Formspree and point the form at it.
+
+### Partner logos
+Partners currently show as name tiles with generic icons. Once a partner gives permission to use its logo:
+1. Save the logo as `assets/img/partners/<name>.png` (square, transparent background works best).
+2. In `index.html`, replace that partner's `<span class="mono">…</span>` with
+   `<img class="logo" src="assets/img/partners/<name>.png" alt="<Partner name> logo">`.
