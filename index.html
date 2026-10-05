@@ -75,7 +75,7 @@
 
     <!-- ============ MEDICAL CAMP GALLERY ============ -->
     <section class="section gallery-section" id="gallery">
-      <div class="container">
+      <div class="container"><div class="theme-frame t-health"><span class="theme-label">Health &amp; social welfare</span>
         <div class="section-head">
           <p class="eyebrow">From the field</p>
           <h2>Our medical camps in pictures</h2>
@@ -90,7 +90,7 @@
           <button class="g-item" data-caption="Eye clinic for staff and families · Redcliff, June 2025"><img loading="lazy" src="https://i.postimg.cc/85ZpzGbs/five1.jpg" alt="Spectacles being fitted" onerror="this.parentElement.remove()"><span>Spectacles fitted</span></button>
           <button class="g-item" data-caption="Eye clinic for staff and families · Redcliff, June 2025"><img loading="lazy" src="https://app.smlzim.com/web/image/20918-be17ff2e/six12.webp" alt="Eye clinic team" onerror="this.parentElement.remove()"><span>Eye clinic team</span></button>
         </div>
-      </div>
+      </div></div>
     </section>
 
     <!-- ============ ABOUT ============ -->
@@ -140,11 +140,11 @@
         </div>
         <div class="tree-diagram">
           <div class="canopy">
-            <span class="leaf">Community development</span>
-            <span class="leaf">Education &amp; skills</span>
-            <span class="leaf">Health &amp; social welfare</span>
-            <span class="leaf">Entrepreneurship</span>
-            <span class="leaf">Partnerships</span>
+            <a class="leaf t-community" href="#kenya">Community development</a>
+            <a class="leaf t-education" href="#recent">Education &amp; skills</a>
+            <a class="leaf t-health" href="#gallery">Health &amp; social welfare</a>
+            <a class="leaf t-enterprise" href="#projects">Entrepreneurship</a>
+            <a class="leaf t-partners" href="#partners">Partnerships</a>
           </div>
           <div class="trunk-img"><img src="assets/img/icon.png" alt="Patel Foundation tree with roots" /></div>
           <div class="roots" role="tablist" aria-label="Our values">
@@ -169,7 +169,7 @@
           <h2>Our impact areas</h2>
         </div>
         <div class="pillars">
-          <article class="card pillar">
+          <article class="card pillar theme-card t-health">
             <div class="pillar-img"><img loading="lazy" src="https://i.postimg.cc/VN1m9vGd/one.jpg" alt="Eye clinic screening in Redcliff" onerror="this.remove()"></div>
             <div class="pillar-body">
               <h3><i data-icon="health"></i>Health initiatives</h3>
@@ -181,7 +181,7 @@
               </ul>
             </div>
           </article>
-          <article class="card pillar">
+          <article class="card pillar theme-card t-education">
             <div class="pillar-img"><img loading="lazy" src="https://i.postimg.cc/fLkvNFjz/R-12-1.jpg" alt="Students supported by the Patel Foundation" onerror="this.remove()"></div>
             <div class="pillar-body">
               <h3><i data-icon="education"></i>Education</h3>
@@ -192,7 +192,7 @@
               </ul>
             </div>
           </article>
-          <article class="card pillar">
+          <article class="card pillar theme-card t-education">
             <div class="pillar-img"><img loading="lazy" src="https://images.unsplash.com/photo-1655720348590-c739c860beed?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Young people learning with laptops" onerror="this.remove()"></div>
             <div class="pillar-body">
               <h3><i data-icon="skills"></i>Skills &amp; ICT</h3>
@@ -203,7 +203,7 @@
               </ul>
             </div>
           </article>
-          <article class="card pillar">
+          <article class="card pillar theme-card t-community">
             <div class="pillar-img"><img loading="lazy" src="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Children at a classroom window" onerror="this.remove()"></div>
             <div class="pillar-body">
               <h3><i data-icon="community"></i>Community &amp; children</h3>
@@ -239,6 +239,7 @@
             <input type="search" id="projectSearch" placeholder="Search projects…" aria-label="Search projects" />
           </label>
         </div>
+        <div class="theme-legend" aria-label="Colour key"><span class="t-health">Health &amp; social welfare</span><span class="t-education">Education &amp; skills</span><span class="t-community">Community development</span><span class="t-enterprise">Entrepreneurship</span><span class="t-partners">Partnerships</span></div>
         <div class="grid" id="projectGrid"></div>
         <p class="empty" id="emptyMsg" hidden>No projects match your search.</p>
       </div>
@@ -253,20 +254,20 @@
           <p>Our youth capacity building programme brings ICT, AI, marketing and energy skills to students and teachers, alongside our health outreach.</p>
         </div>
         <ol class="timeline">
-          <li class="timeline-item"><span class="when">2025</span><div><span class="t-state done">Completed</span><h3>SkillsMaker Program launches</h3><p>Stop the Bleed exposure for students, nurses and medics, plus annual attachments for young women in ICT.</p></div></li>
-          <li class="timeline-item"><span class="when">Apr 2025</span><div><span class="t-state done">Completed</span><h3>Dental outreach &amp; Stop the Bleed, Masvingo</h3><p>166 extractions at Chivi District Hospital, and 65 GZU medical students trained.</p></div></li>
-          <li class="timeline-item"><span class="when">Jun 2025</span><div><span class="t-state done">Completed</span><h3>Eye clinic for staff &amp; families, Redcliff</h3><p>730 screenings and 259 spectacles prescribed in five days.</p></div></li>
-          <li class="timeline-item"><span class="when">May 2026</span><div><span class="t-state done">Secured</span><h3>Raspberry Pi Foundation letter of intent</h3><p>Support for a pilot to set up Code Clubs and deliver Experience AI across three regions, with the Ministries of Energy, Education and ICT.</p></div></li>
-          <li class="timeline-item"><span class="when">Jul 2026</span><div><span class="t-state start">Programme start</span><h3>July Community Challenge</h3><p>Young people use ICT and AI to solve problems facing communities across Africa.</p></div></li>
-          <li class="timeline-item"><span class="when">Q3 2026</span><div><span class="t-state start">In progress</span><h3>Apply ICT in Marketing · Sustainable Energy &amp; Electrical Training</h3><p>Hands-on courses with students in digital marketing and in energy and electrical skills.</p></div></li>
-          <li class="timeline-item is-upcoming"><span class="when">H2 2026</span><div><span class="t-state mob">Mobilisation</span><h3>Redcliff ICT Program · Dzikwa Trust partnership</h3><p>20 teachers trained as trainers in Redcliff, then primary and secondary students. A new youth programme with Dzikwa Trust in Norton, Harare.</p></div></li>
+          <li class="timeline-item t-education"><span class="when">2025</span><div><span class="t-state done">Completed</span><h3>SkillsMaker Program launches</h3><p>Stop the Bleed exposure for students, nurses and medics, plus annual attachments for young women in ICT.</p></div></li>
+          <li class="timeline-item t-health"><span class="when">Apr 2025</span><div><span class="t-state done">Completed</span><h3>Dental outreach &amp; Stop the Bleed, Masvingo</h3><p>166 extractions at Chivi District Hospital, and 65 GZU medical students trained.</p></div></li>
+          <li class="timeline-item t-health"><span class="when">Jun 2025</span><div><span class="t-state done">Completed</span><h3>Eye clinic for staff &amp; families, Redcliff</h3><p>730 screenings and 259 spectacles prescribed in five days.</p></div></li>
+          <li class="timeline-item t-partners"><span class="when">May 2026</span><div><span class="t-state done">Secured</span><h3>Raspberry Pi Foundation letter of intent</h3><p>Support for a pilot to set up Code Clubs and deliver Experience AI across three regions, with the Ministries of Energy, Education and ICT.</p></div></li>
+          <li class="timeline-item t-education"><span class="when">Jul 2026</span><div><span class="t-state start">Programme start</span><h3>July Community Challenge</h3><p>Young people use ICT and AI to solve problems facing communities across Africa.</p></div></li>
+          <li class="timeline-item t-enterprise"><span class="when">Q3 2026</span><div><span class="t-state start">In progress</span><h3>Apply ICT in Marketing · Sustainable Energy &amp; Electrical Training</h3><p>Hands-on courses with students in digital marketing and in energy and electrical skills.</p></div></li>
+          <li class="timeline-item t-community is-upcoming"><span class="when">H2 2026</span><div><span class="t-state mob">Mobilisation</span><h3>Redcliff ICT Program · Dzikwa Trust partnership</h3><p>20 teachers trained as trainers in Redcliff, then primary and secondary students. A new youth programme with Dzikwa Trust in Norton, Harare.</p></div></li>
         </ol>
       </div>
     </section>
 
     <!-- ============ KENYA FEATURE ============ -->
     <section class="section kenya section-dark" id="kenya">
-      <div class="container kenya-grid">
+      <div class="container"><div class="theme-frame t-community kenya-grid"><span class="theme-label">Community development</span>
         <div>
           <p class="eyebrow">Beyond Zimbabwe</p>
           <h2>Armani Children's Home, Kenya</h2>
@@ -286,7 +287,7 @@
           <li><i data-icon="shirt"></i>Clothing packages</li>
           <li><i data-icon="gift"></i>Annual Christmas party for the children</li>
         </ul>
-      </div>
+      </div></div>
     </section>
 
     <!-- ============ DONATE ============ -->
@@ -298,25 +299,25 @@
           <p>Choose where your gift goes. Email us and we will send banking details and confirm how your donation will be used.</p>
         </div>
         <div class="give-grid">
-          <article class="card give">
+          <article class="card give theme-card t-health">
             <span class="icon-badge"><i data-icon="health"></i></span>
             <h3>Medical camps</h3>
             <p>Eye, dental and trauma care for rural communities, plus training and equipment for local health workers.</p>
             <a class="btn btn-primary" href="mailto:impact@patel.it?subject=Donation%3A%20Medical%20camps">Give to medical camps</a>
           </article>
-          <article class="card give">
+          <article class="card give theme-card t-education">
             <span class="icon-badge"><i data-icon="education"></i></span>
             <h3>Bursaries</h3>
             <p>Keep an orphaned or disadvantaged child in school, from primary level all the way to university.</p>
             <a class="btn btn-primary" href="mailto:impact@patel.it?subject=Donation%3A%20Bursaries">Sponsor a bursary</a>
           </article>
-          <article class="card give">
+          <article class="card give theme-card t-education">
             <span class="icon-badge"><i data-icon="skills"></i></span>
             <h3>Skills &amp; ICT</h3>
             <p>Code Clubs, AI literacy and energy skills that prepare young people for work.</p>
             <a class="btn btn-primary" href="mailto:impact@patel.it?subject=Donation%3A%20Skills%20and%20ICT">Fund skills training</a>
           </article>
-          <article class="card give">
+          <article class="card give theme-card t-community">
             <span class="icon-badge"><i data-icon="community"></i></span>
             <h3>Armani Children's Home</h3>
             <p>Food, clothing, clean water and education for the children in Kenya.</p>
@@ -328,8 +329,8 @@
     </section>
 
     <!-- ============ PARTNERS ============ -->
-    <section class="section alt partners" aria-labelledby="partnersTitle">
-      <div class="container">
+    <section class="section alt partners" id="partners" aria-labelledby="partnersTitle">
+      <div class="container"><div class="theme-frame t-partners"><span class="theme-label">Partnerships</span>
         <div class="section-head">
           <p class="eyebrow">Working together</p>
           <h2 id="partnersTitle">Partners &amp; collaborators</h2>
@@ -348,7 +349,7 @@
           <li class="card partner"><span class="mono"><i data-icon="scholar"></i></span><div><b>Cephas Msipa Scholarship Trust</b><small>Scholarship partner</small></div></li>
           <li class="card partner"><span class="mono"><i data-icon="family"></i></span><div><b>Armani Children's Home</b><small>Kenya</small></div></li>
         </ul>
-      </div>
+      </div></div>
     </section>
 
     <!-- ============ STORY & GOVERNANCE ============ -->
@@ -369,7 +370,6 @@
             <dt>Constituted by</dt><dd>Notarial Deed of Trust, executed 24 January 2016 in Harare before Notary Public Nyengeterai Mangidza</dd>
             <dt>Registered</dt><dd>Registrar of Deeds, Harare, 22 September 2016</dd>
             <dt>Deed number</dt><dd>MA 0001295/2016</dd>
-            <dt>Founder</dt><dd>Kalpesh Rasikbhai Patel</dd>
             <dt>Governance</dt><dd>Managed by its Board of Trustees in line with the Deed of Trust</dd>
           </dl>
         </aside>
@@ -412,7 +412,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <img src="assets/img/logo.png" alt="Patel Foundation" class="footer-logo" />
-      <p>Patel Foundation Trust (Zimbabwe) · Established 2016<br>Notarial Deed of Trust No. MA 0001295/2016 · <a href="mailto:impact@patel.it">impact@patel.it</a></p>
+      <p>Patel Foundation Trust · Established 2016<br>Trust No: MA 0001295/2016 · <a href="mailto:impact@patel.it">impact@patel.it</a></p>
       <p class="copy">© <span id="year">2026</span> Patel Foundation Trust. All rights reserved.</p>
     </div>
   </footer>

@@ -148,7 +148,7 @@ const PROJECTS = [
   },
   {
     title: "Apply ICT in Marketing",
-    category: "skills", status: "Ongoing",
+    category: "skills", theme: "enterprise", status: "Ongoing",
     date: "Q3 2026", place: "Zimbabwe",
     summary: "A practical course where students learn to use digital tools in real marketing projects.",
     stats: [], images: [U("photo-1648301033733-44554c74ec50","Creab ThePolymath","cr_eab")], body: `<p>Students learn digital marketing by applying ICT tools to real-world projects.</p>`
@@ -162,7 +162,7 @@ const PROJECTS = [
   },
   {
     title: "Sustainable Energy & Electrical Training",
-    category: "skills", status: "Ongoing",
+    category: "skills", theme: "enterprise", status: "Ongoing",
     date: "Q3 2026", place: "Zimbabwe",
     summary: "Practical training in sustainable energy and electrical skills for young people.",
     stats: [], images: [U("photo-1740825961434-e9287638592b","David Geneugelijk","davidgeneugelijk")], body: `<p>Building skills for jobs in energy, from electrical basics to solar and other sustainable energy systems.</p>`
@@ -218,6 +218,8 @@ const SVG = {
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SVG[name] || ""}</svg>`;
 const drawIcons = (root = document) => root.querySelectorAll("i[data-icon]:empty").forEach(el => { el.innerHTML = icon(el.dataset.icon); });
+const THEME_OF = { health: "t-health", education: "t-education", skills: "t-education", community: "t-community" };
+const themeOf = p => p.theme ? "t-" + p.theme : THEME_OF[p.category];
 const LABELS = { health: "Health", education: "Education", skills: "Skills & ICT", community: "Community" };
 
 /* ---- Helpers ---- */
@@ -293,7 +295,7 @@ let filter = "all";
 function cardHTML(p, i) {
   const first = p.images[0];
   const img = first ? `<img loading="lazy" src="${srcOf(first).replace("w=1200", "w=700")}" alt="" onerror="this.remove()">` : "";
-  return `<article class="card project-card" data-i="${i}" role="button" tabindex="0" aria-label="Read more: ${p.title}">
+  return `<article class="card project-card theme-card ${themeOf(p)}" data-i="${i}" role="button" tabindex="0" aria-label="Read more: ${p.title}">
     <div class="card-media">
       <i data-icon="${p.category}"></i>${img}
       <span class="tag">${LABELS[p.category]}</span>
@@ -332,6 +334,7 @@ window.galleryFail = img => {
 const modal = $("#projectModal");
 function openProject(card) {
   const p = PROJECTS[+card.dataset.i];
+  modal.className = "modal theme-card " + themeOf(p);
   $("#modalMeta").textContent = `${LABELS[p.category]} · ${p.date} · ${p.place}`;
   $("#modalTitle").textContent = p.title;
   $("#modalStats").innerHTML = p.stats.map(([n, l]) => `<div><strong>${n}</strong><span>${l}</span></div>`).join("");

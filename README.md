@@ -22,6 +22,7 @@ In **Settings → Pages → Custom domain**, enter your domain (for example `pat
 | Projects and stories | `assets/js/main.js` → `PROJECTS` array |
 | Page text (About, Mission, Recent projects timeline, Kenya, Donate, Governance) | `index.html` |
 | Colours (earth palette) and fonts | `assets/css/styles.css` → `:root` |
+| Theme colour code (Health, Education & skills, Community, Entrepreneurship, Partnerships) | `assets/css/styles.css` → `--th-*` variables. Add `t-health`, `t-education`, `t-community`, `t-enterprise` or `t-partners` to a section frame or card. In `PROJECTS`, set `theme: "enterprise"` to override a card's colour. |
 | Medical camp gallery | `index.html` → section `#gallery` |
 | Social share image | `assets/img/og-image.jpg` |
 | Logo | `assets/img/logo.png` |
