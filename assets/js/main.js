@@ -8,7 +8,8 @@ const SITE = {
 /* ---- Project data (add new stories here) ----
    category: health | education | skills | community
    status:   Completed | Ongoing | Mobilisation
-   images:   URLs or local paths like "assets/img/projects/eye1.jpg"   */
+   images:   URLs or local paths like "assets/img/projects/eye1.jpg"
+   card:     optional image for the grid card (defaults to images[0])   */
 const PROJECTS = [
   {
     title: "Employee & Family Eye Clinic",
@@ -105,7 +106,15 @@ const PROJECTS = [
     category: "education", status: "Ongoing",
     date: "Ongoing", place: "Chisumbanje, Chiredzi",
     summary: "Classrooms built and furnished in a remote community, with a borehole for clean water and electricity on the way.",
-    stats: [], images: [U("photo-1571417800906-5a5058dbd45d","Toby Wong","hitobywong"), U("photo-1760873059715-7c7cfbe2a2c6","Andrew Itaga","and73w")],
+    stats: [],
+    images: [
+      "assets/img/projects/chisumbanje-opening-banner.jpg",
+      "assets/img/projects/chisumbanje-classroom.jpg",
+      "assets/img/projects/chisumbanje-pupils.jpg",
+      "assets/img/projects/chisumbanje-donated-books.jpg",
+      "assets/img/projects/chisumbanje-ribbon-cutting.jpg",
+    ],
+    card: "assets/img/projects/chisumbanje-pupils.jpg",
     body: `<ul><li>New classrooms built and furnished</li><li>A borehole drilled for clean water</li><li>Electricity under way, using both grid power and solar</li></ul>`
   },
   {
@@ -293,7 +302,7 @@ const grid = $("#projectGrid"), empty = $("#emptyMsg"), search = $("#projectSear
 let filter = "all";
 
 function cardHTML(p, i) {
-  const first = p.images[0];
+  const first = p.card || p.images[0];
   const img = first ? `<img loading="lazy" src="${srcOf(first).replace("w=1200", "w=700")}" alt="" onerror="this.remove()">` : "";
   return `<article class="card project-card theme-card ${themeOf(p)}" data-i="${i}" role="button" tabindex="0" aria-label="Read more: ${p.title}">
     <div class="card-media">
