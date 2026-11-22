@@ -197,11 +197,12 @@ i[data-icon] svg { width: 100%; height: 100%; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
 .project-card { display: flex; flex-direction: column; overflow: hidden; cursor: pointer; text-align: left; animation: fadeUp .4s ease both; }
 .project-card:hover, .project-card:focus-visible { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.card-media { position: relative; width: 100%; aspect-ratio: 16 / 10; overflow: hidden; background: var(--pf-leaf-soft); color: var(--pf-leaf); display: grid; place-items: center; }
+.card-media { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--pf-leaf-soft); color: var(--pf-leaf); display: grid; place-items: center; }
 .card-media > i[data-icon] { width: 56px; height: 56px; opacity: .85; }
 .card-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.card-media:has(img)::after { content: ""; position: absolute; inset: auto 0 0; height: 76px; background: linear-gradient(to top, rgba(22,56,40,.6), rgba(22,56,40,0)); z-index: 1; pointer-events: none; }
 .project-card:hover .card-media img { transform: scale(1.05); }
-.tag, .status { position: absolute; top: 12px; z-index: 2; font-size: .72rem; font-weight: 700; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.tag, .status { position: absolute; bottom: 12px; z-index: 2; font-size: .72rem; font-weight: 700; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
 .tag { left: 12px; background: var(--pf-leaf-soft); color: var(--pf-forest); text-transform: uppercase; }
 .status { right: 12px; background: var(--pf-forest); color: #fff; }
 .status.completed { background: var(--pf-leaf); }
@@ -313,6 +314,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--pf-leaf); box-sh
 .modal-close { position: sticky; top: 12px; float: right; margin: 12px 12px -56px 0; z-index: 3; width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--pf-clay); background: var(--pf-cream); color: var(--pf-bark); font-size: 1.6rem; cursor: pointer; }
 .modal-gallery { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 4px; background: var(--pf-forest); }
 .modal-gallery img { height: 340px; width: auto; max-width: 100%; object-fit: cover; scroll-snap-align: start; flex: 0 0 auto; }
+.modal-gallery:has(img:only-child) { justify-content: center; }
 .modal-gallery .fallback { height: 200px; width: 100%; display: grid; place-items: center; background: var(--pf-leaf-soft); color: var(--pf-leaf); }
 .modal-gallery .fallback i[data-icon] { width: 72px; height: 72px; }
 .modal-body { padding: 26px 30px 32px; }
