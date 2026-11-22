@@ -57,7 +57,7 @@ const PROJECTS = [
     category: "health", status: "Completed",
     date: "2025", place: "Great Zimbabwe University",
     summary: "Stop the Bleed training for GZU, and bleeding-control equipment donated so the skills can be taught again and again.",
-    stats: [], images: [],
+    stats: [], images: ["assets/img/projects/gzu-campus.jpg"],
     body: `<p>Beyond the training, we donated equipment so the university can keep teaching bleeding control to new groups of students.</p>`
   },
   {
@@ -65,21 +65,21 @@ const PROJECTS = [
     category: "health", status: "Completed",
     date: "2025", place: "Masvingo",
     summary: "Training and equipment for trainee nurses, strengthening the next generation of frontline health workers.",
-    stats: [], images: [], body: `<p>Trainee nurses received Stop the Bleed training, and the school received equipment to support its practical teaching.</p>`
+    stats: [], images: ["assets/img/projects/nursing-school-training.jpg"], body: `<p>Trainee nurses received Stop the Bleed training, and the school received equipment to support its practical teaching.</p>`
   },
   {
     title: "Masvingo General Hospital Training & Equipment",
     category: "health", status: "Completed",
     date: "April 2025", place: "Masvingo General Hospital",
     summary: "Trauma training for hospital staff, with donated equipment to improve emergency care.",
-    stats: [], images: [], body: `<p>Hospital clinicians took part in Stop the Bleed and trauma education, and received equipment to support emergency care in the province.</p>`
+    stats: [], images: ["assets/img/projects/masvingo-general-hospital.jpg"], body: `<p>Hospital clinicians took part in Stop the Bleed and trauma education, and received equipment to support emergency care in the province.</p>`
   },
   {
     title: "ACS Train-the-Trainer Certification for Masvingo Doctors",
     category: "health", status: "Completed",
     date: "2025", place: "Masvingo",
     summary: "Masvingo doctors earned approved “Train-the-Trainer” certification with the American College of Surgeons (ACS).",
-    stats: [], images: [],
+    stats: [], images: ["assets/img/projects/acs-train-the-trainer.jpg"],
     body: `<p>Certified local trainers can now teach bleeding control and trauma techniques themselves, so the skills keep spreading after the visiting team leaves.</p>
       <p>The ACS programme lead has written up the outcomes of the programme in a paper and submitted it for publication.</p>`
   },
@@ -113,7 +113,7 @@ const PROJECTS = [
     category: "skills", status: "Completed",
     date: "2025", place: "Masvingo",
     summary: "Students, nurses and medics gained real-world experience through the Stop the Bleed programme.",
-    stats: [], images: [], body: `<p>Part of SkillsMaker 2025: taking learners out of the classroom and into real clinical and emergency settings.</p>`
+    stats: [], images: ["assets/img/projects/stop-the-bleed-training.jpg"], body: `<p>Part of SkillsMaker 2025: taking learners out of the classroom and into real clinical and emergency settings.</p>`
   },
   {
     title: "Internships for Women in ICT",
