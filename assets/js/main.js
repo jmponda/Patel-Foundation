@@ -5,6 +5,17 @@ const SITE = {
   email: "impact@patel.it",
 };
 
+/* ---- Raspberry Pi programme: target schools and lead (Nov 2026) ---- */
+const SCHOOLS = {
+  primary: ["Mafidhi", "Redcliff", "Dambudzo", "R J Davies", "Torwood", "Rutendo", "George Hill"],
+  secondary: ["Drake", "Batanai", "Rutendo"],
+};
+const LEAD = {
+  name: "Simbarashe Mucharwa", role: "Schools Inspector",
+  phone: "077 277 3969", tel: "+263772773969",
+  email: "mucharwasimbarashe01@gmail.com",
+};
+
 /* ---- Project data (add new stories here) ----
    category: health | education | skills | community
    status:   Completed | Ongoing | Mobilisation
@@ -136,9 +147,18 @@ const PROJECTS = [
     category: "skills", status: "Ongoing",
     date: "From May 2026", place: "Three regions of Zimbabwe",
     summary: "A pilot to set up Code Clubs and teach AI literacy, supported by the Raspberry Pi Foundation.",
-    stats: [["3", "regions in the pilot"]], images: [U("photo-1541178735493-479c1a27ed24","X","disruptxn")],
+    stats: [["3", "regions in the pilot"], ["10", "target schools"], ["7", "primary"], ["3", "secondary"]], images: [U("photo-1541178735493-479c1a27ed24","X","disruptxn")],
     body: `<p>In May 2026, the Raspberry Pi Foundation confirmed its intent to support the Patel Foundation and the Ministry of Energy and Power Development, together with the Ministries of Primary and Secondary Education and ICT, in a pilot programme.</p>
-      <ul><li>Training educators to teach <b>Experience AI</b>, lessons on AI literacy developed with Google DeepMind, with certificates on completion</li><li>Training educators to set up and run <b>Code Clubs</b>, designed for teachers with no coding background</li></ul>`
+      <ul><li>Training educators to teach <b>Experience AI</b>, lessons on AI literacy developed with Google DeepMind, with certificates on completion</li><li>Training educators to set up and run <b>Code Clubs</b>, designed for teachers with no coding background</li></ul>
+      <h4>Target schools</h4>
+      <div class="school-cols">
+        <div><b>Primary</b><ul>${SCHOOLS.primary.map(s => `<li>${s}</li>`).join("")}</ul></div>
+        <div><b>Secondary</b><ul>${SCHOOLS.secondary.map(s => `<li>${s}</li>`).join("")}</ul></div>
+      </div>
+      <h4>Programme lead</h4>
+      <p><b>${LEAD.name}</b>, ${LEAD.role}, leads the group of schools.<br>
+        Phone <a href="tel:${LEAD.tel}">${LEAD.phone}</a> · Email <a href="mailto:${LEAD.email}">${LEAD.email}</a></p>
+      <p class="note">Teachers at these schools are receiving our <a href="#braille">3D-printed braille learning kit</a> as a training kit.</p>`
   },
   {
     title: "Redcliff ICT Program",
@@ -146,7 +166,17 @@ const PROJECTS = [
     date: "H2 2026", place: "Redcliff Constituency",
     summary: "Code Clubs and AI training for primary and secondary students and teachers, starting with 20 teachers.",
     stats: [["20", "teachers in train-the-trainer"]], images: [U("photo-1655720348590-c739c860beed","Iwaria Inc.","iwaria")],
-    body: `<p>Supported by the Member of Parliament for Redcliff Constituency. The programme starts by training 20 teachers as trainers, then moves on to students.</p><p>Lessons will be both online and in person, held after school hours and during the holidays.</p>`
+    body: `<p>Supported by the Member of Parliament for Redcliff Constituency. The programme starts by training 20 teachers as trainers, then moves on to students.</p><p>Lessons will be both online and in person, held after school hours and during the holidays.</p><p>Ten Redcliff-area schools (seven primary, three secondary) have been selected, led by Schools Inspector Simbarashe Mucharwa. See the Code Clubs &amp; Experience AI project for the full list.</p>`
+  },
+  {
+    title: "3D-Printed Braille Learning Kit for Teachers",
+    category: "education", icon: "braille", status: "Ongoing",
+    date: "From November 2026", place: "Raspberry Pi programme schools",
+    summary: "A 3D-printable kit that helps students learn braille by touch, issued to teachers as a training kit.",
+    stats: [["10", "schools receiving kits"]], images: [], card: "",
+    body: `<p>We are issuing printed braille learning kits to teachers at the ten target schools of our Raspberry Pi programme, so they can teach braille with something students can hold and feel.</p>
+      <p>Registered educators can also download the 3D print files and the detailed instruction guide, and print more kits.</p>
+      <p><a class="btn btn-primary btn-sm" href="#braille" onclick="document.getElementById('projectModal').close()">Register to download</a></p>`
   },
   {
     title: "Partnership with Dzikwa Trust",
@@ -224,6 +254,7 @@ const SVG = {
   scholar: '<path d="M2 8.5l10-5 10 5-10 5z"/><path d="M6 10.5V14c0 1.4 2.7 2.7 6 2.7s6-1.3 6-2.7v-3.5"/><path d="M6 20h12"/><path d="M8 18v4M16 18v4"/>',
   family: '<path d="M3 11l9-7 9 7"/><path d="M5 9.5V21h14V9.5"/><circle cx="9.8" cy="13" r="1.6"/><circle cx="14.6" cy="14" r="1.3"/><path d="M7.5 21v-2.5a2.3 2.3 0 0 1 4.6 0V21M12.8 21v-1.8a1.8 1.8 0 0 1 3.6 0V21"/>',
   search: '<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+  braille: '<rect x="5" y="2.5" width="14" height="19" rx="3"/><circle cx="9.5" cy="7.5" r="1.3" fill="currentColor"/><circle cx="14.5" cy="7.5" r="1.3" fill="currentColor"/><circle cx="9.5" cy="12" r="1.3"/><circle cx="14.5" cy="12" r="1.3" fill="currentColor"/><circle cx="9.5" cy="16.5" r="1.3" fill="currentColor"/><circle cx="14.5" cy="16.5" r="1.3"/>',
 };
 const icon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${SVG[name] || ""}</svg>`;
 const drawIcons = (root = document) => root.querySelectorAll("i[data-icon]:empty").forEach(el => { el.innerHTML = icon(el.dataset.icon); });
@@ -306,7 +337,7 @@ function cardHTML(p, i) {
   const img = first ? `<img loading="lazy" src="${srcOf(first).replace("w=1200", "w=700")}" alt="" onerror="this.remove()">` : "";
   return `<article class="card project-card theme-card ${themeOf(p)}" data-i="${i}" role="button" tabindex="0" aria-label="Read more: ${p.title}">
     <div class="card-media">
-      <i data-icon="${p.category}"></i>${img}
+      <i data-icon="${p.icon || p.category}"></i>${img}
       <span class="tag">${LABELS[p.category]}</span>
       <span class="status ${p.status.toLowerCase()}">${p.status}</span>
     </div>
@@ -349,10 +380,10 @@ function openProject(card) {
   $("#modalStats").innerHTML = p.stats.map(([n, l]) => `<div><strong>${n}</strong><span>${l}</span></div>`).join("");
   $("#modalContent").innerHTML = p.body;
   const g = $("#modalGallery");
-  g.className = "modal-gallery"; g.dataset.cat = p.category;
+  g.className = "modal-gallery"; g.dataset.cat = p.icon || p.category;
   g.innerHTML = p.images.length
     ? p.images.map(im => `<img src="${srcOf(im)}" alt="${p.title}" onerror="galleryFail(this)">`).join("")
-    : `<div class="fallback">${icon(p.category)}</div>`;
+    : `<div class="fallback">${icon(p.icon || p.category)}</div>`;
   modal.showModal();
   modal.scrollTop = 0;
 }
@@ -380,6 +411,59 @@ $("#contactForm").addEventListener("submit", e => {
   note.style.color = ""; note.textContent = "Thank you! Your email app should open with your message ready to send.";
   f.reset();
 });
+
+/* ---- Braille kit registration ----
+   Sends the form to the Google Apps Script set in assets/js/braille-config.js.
+   The script stores the registration and emails a private download link.   */
+(() => {
+  const f = $("#brailleForm"); if (!f) return;
+  const note = $("#brailleNote"), sel = f.elements.school, other = $("#bk-other-wrap");
+  sel.innerHTML = `<option value="">Select your school…</option>
+    <optgroup label="Primary">${SCHOOLS.primary.map(s => `<option>${s} Primary</option>`).join("")}</optgroup>
+    <optgroup label="Secondary">${SCHOOLS.secondary.map(s => `<option>${s} Secondary</option>`).join("")}</optgroup>
+    <option value="other">Another school</option>`;
+  sel.addEventListener("change", () => { other.hidden = sel.value !== "other"; });
+  const say = (msg, bad) => { note.style.color = bad ? "#a4321f" : ""; note.textContent = msg; };
+
+  f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const v = n => f.elements[n].value.trim();
+    const checks = {
+      name: v("name").length > 1,
+      email: /^\S+@\S+\.\S+$/.test(v("email")),
+      phone: v("phone").replace(/[^\d]/g, "").length >= 9,
+      gender: !!v("gender"),
+      school: !!v("school") && (v("school") !== "other" || v("otherSchool").length > 1),
+    };
+    let ok = true;
+    Object.entries(checks).forEach(([n, good]) => {
+      const el = n === "school" && v("school") === "other" ? f.elements.otherSchool : f.elements[n];
+      el.classList.toggle("invalid", !good); if (!good) ok = false;
+    });
+    if (!ok) return say("Please complete every field: name, a valid email, phone number, gender and school.", true);
+
+    const api = window.BRAILLE_API;
+    if (!api) return say(`Downloads open soon. In the meantime, email ${SITE.email} to request the files.`, true);
+
+    const btn = f.querySelector("button[type=submit]");
+    btn.disabled = true; say("Sending…");
+    try {
+      const payload = {
+        name: v("name"), email: v("email"), phone: v("phone"), gender: v("gender"),
+        school: v("school") === "other" ? v("otherSchool") : v("school"),
+        website: v("website"), // honeypot: real people leave this empty
+      };
+      const res = await fetch(api, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(payload) });
+      const out = await res.json();
+      if (!out.ok) throw new Error(out.error || "failed");
+      f.reset(); other.hidden = true;
+      say(`Thank you. We've sent a confirmation link to ${payload.email}. Open it to download the files (check your spam folder too).`);
+    } catch (err) {
+      say(err.message && err.message !== "failed" && !/fetch|json/i.test(err.message)
+        ? err.message : `Something went wrong. Please try again, or email ${SITE.email}.`, true);
+    } finally { btn.disabled = false; }
+  });
+})();
 
 /* ---- Medical camp lightbox ---- */
 const lb = $("#lightbox"), lbImg = $("#lbImg"), lbCap = $("#lbCap");
