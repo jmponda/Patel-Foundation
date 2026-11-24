@@ -34,6 +34,7 @@
         <a href="#approach">Approach</a>
         <a href="#projects">Projects</a>
         <a href="#recent">Recent projects</a>
+        <a href="#braille">Braille kit</a>
         <a href="#contact">Contact</a>
         <a href="#donate" class="btn btn-primary btn-sm">Donate</a>
       </nav>
@@ -199,7 +200,7 @@
               <ul>
                 <li><b>SkillsMaker 2025:</b> real-world exposure for students, nurses and medics.</li>
                 <li><b>Women in ICT:</b> annual attachments with Harare Institute of Technology and in Redcliff.</li>
-                <li><b>Code Clubs &amp; Experience AI:</b> a pilot across three regions of Zimbabwe with the Raspberry Pi Foundation.</li>
+                <li><b>Code Clubs &amp; Experience AI:</b> a pilot across three regions of Zimbabwe with the Raspberry Pi Foundation, starting with ten target schools.</li>
               </ul>
             </div>
           </article>
@@ -260,9 +261,60 @@
           <li class="timeline-item t-partners"><span class="when">May 2026</span><div><span class="t-state done">Secured</span><h3>Raspberry Pi Foundation letter of intent</h3><p>Support for a pilot to set up Code Clubs and deliver Experience AI across three regions, with the Ministries of Energy, Education and ICT.</p></div></li>
           <li class="timeline-item t-education"><span class="when">Jul 2026</span><div><span class="t-state start">Programme start</span><h3>July Community Challenge</h3><p>Young people use ICT and AI to solve problems facing communities across Africa.</p></div></li>
           <li class="timeline-item t-enterprise"><span class="when">Q3 2026</span><div><span class="t-state start">In progress</span><h3>Apply ICT in Marketing · Sustainable Energy &amp; Electrical Training</h3><p>Hands-on courses with students in digital marketing and in energy and electrical skills.</p></div></li>
+          <li class="timeline-item t-education"><span class="when">Nov 2026</span><div><span class="t-state done">Selected</span><h3>Raspberry Pi programme target schools</h3><p>Seven primary schools (Mafidhi, Redcliff, Dambudzo, R J Davies, Torwood, Rutendo and George Hill) and three secondary schools (Drake, Batanai and Rutendo), led by Schools Inspector Simbarashe Mucharwa. Teachers receive our <a href="#braille">3D-printed braille learning kit</a>.</p></div></li>
           <li class="timeline-item t-community is-upcoming"><span class="when">H2 2026</span><div><span class="t-state mob">Mobilisation</span><h3>Redcliff ICT Program · Dzikwa Trust partnership</h3><p>20 teachers trained as trainers in Redcliff, then primary and secondary students. A new youth programme with Dzikwa Trust in Norton, Harare.</p></div></li>
         </ol>
       </div>
+    </section>
+
+    <!-- ============ BRAILLE KIT ============ -->
+    <section class="section alt braille" id="braille" aria-labelledby="brailleTitle">
+      <div class="container"><div class="theme-frame t-education"><span class="theme-label">Education &amp; skills</span>
+        <div class="braille-grid">
+          <div>
+            <p class="eyebrow">Teacher resources</p>
+            <h2 id="brailleTitle">3D-printed braille learning kit</h2>
+            <p class="braille-word" aria-hidden="true">⠠⠃⠗⠁⠊⠇⠇⠑</p>
+            <p>A kit that helps students learn braille by touch. You print it on a 3D printer and use it in class so learners can feel each letter as they learn it.</p>
+            <p>We are issuing printed kits to teachers at the ten target schools of our <a href="#projects">Raspberry Pi programme</a> as training kits. Any educator can register to download the print files and the detailed instruction guide.</p>
+            <ul class="kit-facts">
+              <li><i data-icon="braille"></i><div><b>What it is</b><span>A 3D-printable braille learning kit for the classroom.</span></div></li>
+              <li><i data-icon="school"></i><div><b>Who it's for</b><span>Teachers and schools teaching braille, starting with our programme schools.</span></div></li>
+              <li><i data-icon="book"></i><div><b>What you download</b><span>The 3D print file and the detailed instructions (PDF).</span></div></li>
+            </ul>
+            <ol class="kit-steps">
+              <li><b>Register</b> with the short form.</li>
+              <li><b>Confirm</b> using the link we email you.</li>
+              <li><b>Download</b> the print file and the PDF guide.</li>
+            </ol>
+          </div>
+
+          <form class="form" id="brailleForm" novalidate>
+            <h3>Register to download</h3>
+            <label for="bk-name">Full name<input id="bk-name" name="name" required autocomplete="name" /></label>
+            <div class="row">
+              <label for="bk-email">Email<input id="bk-email" name="email" type="email" required autocomplete="email" /></label>
+              <label for="bk-phone">Phone number<input id="bk-phone" name="phone" type="tel" required autocomplete="tel" placeholder="e.g. 077 123 4567" /></label>
+            </div>
+            <div class="row">
+              <label for="bk-gender">Gender
+                <select id="bk-gender" name="gender" required>
+                  <option value="">Select…</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </label>
+              <label for="bk-school">School<select id="bk-school" name="school" required></select></label>
+            </div>
+            <label for="bk-other" id="bk-other-wrap" hidden>School name<input id="bk-other" name="otherSchool" autocomplete="organization" /></label>
+            <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+            <button class="btn btn-primary" type="submit">Send me the download link</button>
+            <p class="form-note" id="brailleNote" role="status"></p>
+            <p class="form-fine">We use your details only to send your download link and to report on the programme. We do not share them.</p>
+          </form>
+        </div>
+      </div></div>
     </section>
 
     <!-- ============ KENYA FEATURE ============ -->
@@ -470,6 +522,7 @@
     <button class="lb-nav lb-next" id="lbNext" aria-label="Next photo">›</button>
   </dialog>
 
+  <script src="assets/js/braille-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
